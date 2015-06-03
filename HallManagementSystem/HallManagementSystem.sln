@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HallManagementSystem", "HallManagementSystem\HallManagementSystem.csproj", "{1A556096-BD72-4BDB-AD23-25A86E541138}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject1", "ModelingProject1\ModelingProject1.modelproj", "{606E8479-61F9-44D4-966A-BA885B3E96C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A556096-BD72-4BDB-AD23-25A86E541138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A556096-BD72-4BDB-AD23-25A86E541138}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A556096-BD72-4BDB-AD23-25A86E541138}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A556096-BD72-4BDB-AD23-25A86E541138}.Release|Any CPU.Build.0 = Release|Any CPU
+		{606E8479-61F9-44D4-966A-BA885B3E96C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{606E8479-61F9-44D4-966A-BA885B3E96C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{606E8479-61F9-44D4-966A-BA885B3E96C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{606E8479-61F9-44D4-966A-BA885B3E96C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

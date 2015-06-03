@@ -1,0 +1,459 @@
+﻿<Window x:Class="HallManagementSystem.NewAllotmentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" WindowStartupLocation="CenterScreen"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" ResizeMode="CanMinimize"
+        Title="New Allotment Window UI" Height="460" Width="753">
+    <Window.Resources>
+        <Style x:Key="DiningStyle" TargetType="Control">
+            <Setter Property="Button.Background" Value="Gray"/>
+            <Setter Property="Button.Foreground" Value="White"/>
+            <Setter Property="Button.FontFamily" Value="Segoe UI"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Black"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
+
+        <Style TargetType="{x:Type DatePickerTextBox}">
+            <Setter Property="Text" Value="My Custom Text" />
+            <Setter Property="Background" Value="AliceBlue" />
+        </Style>
+        
+        <Style x:Key="MyWaterMarkStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <Border Background="White" 
+                                    BorderBrush="Blue" 
+                                    BorderThickness="1"/>
+
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          Margin="5,0,0,0" 
+                                          VerticalAlignment="Center" />
+
+                            <Label Margin="5,0,0,0" 
+                                   x:Name="WaterMarkLabel" 
+                                   Content="{TemplateBinding Tag}"
+                                   VerticalAlignment="Center"
+                                   Visibility="Collapsed" 
+                                   Foreground="Gray" 
+                                   FontFamily="Italic"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="Text" 
+                                               Value=""/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Visibility" 
+                                        TargetName="WaterMarkLabel"
+                                        Value="Visible"/>
+                            </MultiTrigger>
+                            <Trigger Property="IsEnabled" 
+                                     Value="False">
+                                <Setter Property="Foreground" 
+                                        Value="DimGray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="210"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="210"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        
+        <!--New Allotment TextBlock-->
+        <TextBlock  
+                     Background="DarkMagenta"
+                     Text="    New Allotment"
+                     TextAlignment="Left"
+                     FontFamily="Segoe UI Light" FontWeight="ExtraBold"
+                     FontSize="24" 
+                     Foreground="White" 
+                     Grid.ColumnSpan="9"
+                     Margin="0,1,-16,10"
+                     Grid.RowSpan="2"/>
+        
+        <Label   Grid.Row="3" 
+                 Grid.Column="1"
+                 Content="Floor Name">
+        </Label>
+        
+        <!--Floors ComboBox-->
+        <Border Grid.Row="3"  Grid.Column="3"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <ComboBox   Grid.Row="3" 
+                        Grid.Column="3"  
+                        IsEditable="True" 
+                        IsReadOnly="True"
+                        BorderBrush="Blue"
+                        Name="FloorIDComboBox"
+                        FontWeight="SemiBold" 
+                        Text="Floor Name"
+                        FontSize="14" 
+                        Foreground="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                        SelectionChanged="FloorIDComboBox_SelectionChanged" >
+
+            </ComboBox>
+        </Border>
+
+        <Label   Grid.Row="5" 
+                 Grid.Column="1"
+                 Content="Block Name">
+        </Label>
+        <!--Blocks ComboBox-->
+        <Border Grid.Row="5"  Grid.Column="3"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <ComboBox   Grid.Row="3" 
+                        Grid.Column="3"  
+                        FontSize="14" 
+                        IsEditable="True" 
+                        IsReadOnly="True"
+                        FontWeight="SemiBold" 
+                        Text="Block Name"
+                        BorderBrush="Blue"
+                        Name="BlockIDComboBox"
+                        Foreground="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" Height="28" VerticalAlignment="Top" 
+                        SelectionChanged="BlockIDComboBox_SelectionChanged">
+
+            </ComboBox>
+        </Border>
+        
+        <Label   Grid.Row="7" 
+                 Grid.Column="1"
+                 Content="Room No">
+        </Label>
+
+        <!--Rooms ComboBox-->
+        <Border Grid.Row="7"  Grid.Column="3"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <ComboBox   Grid.Row="7" 
+                        Grid.Column="3"  
+                        Text="Room No"
+                        FontSize="14" 
+                        BorderBrush="Blue"
+                        FontWeight="SemiBold" 
+                        Name="RoomIDComboBox"
+                        IsEditable="True" 
+                        IsReadOnly="True"
+                        Foreground="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" SelectionChanged="RoomIDComboBox_SelectionChanged">
+            </ComboBox>
+        </Border>
+        
+        <Label   Grid.Row="9" 
+                 Grid.Column="1"
+                 Content="Seat Name">
+        </Label>
+        
+        <!--Seats ComboBox-->
+        <Border Grid.Row="9"  Grid.Column="3"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <ComboBox   Grid.Row="9" 
+                        Grid.Column="3"  
+                        Name="SeatIDComboBox"
+                        Text="Seat Name"
+                        FontSize="14" 
+                        BorderBrush="Blue"
+                        IsEditable="True" 
+                        IsReadOnly="True"   
+                        FontWeight="SemiBold" 
+                        Foreground="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" SelectionChanged="SeatIDComboBox_SelectionChanged">
+                <!--Text="Seat Name"-->
+            </ComboBox>
+        </Border>
+
+        <Label   Grid.Row="11" 
+                 Grid.Column="1"
+                 Content="Seat Code">
+        </Label>
+        <!--Generated Seat Code Textblock-->
+        <Border Grid.Row="11"  Grid.Column="3"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <TextBox  Style="{StaticResource MyWaterMarkStyle}"
+                      Grid.Row="11" 
+                      Grid.Column="3"  
+                      Name="GeneratedSeatCodeTextBox"
+                      Tag="Generated Seat Code"
+                      FontSize="14"    
+                      FontWeight="SemiBold" 
+                      Foreground="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" >
+            </TextBox>
+        </Border>
+
+        <Label   Grid.Row="13" 
+                 Grid.Column="1"
+                 Content="Department">
+        </Label>
+        
+        <!--Department ComboBox-->
+        <Border Grid.Row="13"  Grid.Column="3"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <ComboBox   Grid.Row="13" 
+                        Grid.Column="3"  
+                        Text="Department"
+                        FontSize="14" 
+                        BorderBrush="Blue"
+                        Name="DepartmentIDComboBox"
+                        IsEditable="True" 
+                        IsReadOnly="True"
+                        FontWeight="SemiBold" 
+                        Foreground="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" SelectionChanged="DepartmentIDComboBox_SelectionChanged">
+
+            </ComboBox>
+        </Border>
+
+        <Label   Grid.Row="15" 
+                 Grid.Column="1"
+                 Content="Session">
+        </Label>
+        <Border Grid.Row="15"  Grid.Column="3"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <ComboBox   Grid.Row="15" 
+                        Grid.Column="3"  
+                        Text="Session"
+                        Name="SessionComboBox"
+                        FontSize="14" 
+                          BorderBrush="Blue"
+                        IsEditable="True" 
+                        IsReadOnly="True"
+                        FontWeight="SemiBold" 
+                        Foreground="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" SelectionChanged="SessionComboBox_SelectionChanged">
+            </ComboBox>
+        </Border>
+        
+        <Label   Grid.Row="17" 
+                 Grid.Column="1"
+                 Content="Roll No">
+        </Label>
+        <!--Roll ComboBox ComboBox-->
+        <Border Grid.Row="17"  Grid.Column="3"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <ComboBox   Grid.Row="17" 
+                        Grid.Column="3"  
+                        Name="RollComboBox"
+                        Text="Roll No"
+                        FontSize="14" 
+                        IsEditable="True" 
+                          BorderBrush="Blue"
+                        IsReadOnly="True"
+                        FontWeight="SemiBold" 
+                        Foreground="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" SelectionChanged="RollComboBox_SelectionChanged" >
+
+            </ComboBox>
+        </Border>
+
+        <!--<Border Grid.Row="19"  Grid.Column="1"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <Button  Grid.Row="19" 
+                     Grid.Column="1"  
+                     FontSize="14" 
+                     Content="Back"
+                     Style="{StaticResource DiningStyle}" 
+                     FontWeight="SemiBold" 
+                     Name="BackButton"
+                      
+                     Click="BackButton_Click">
+            </Button>
+        </Border>-->
+
+        <Label   Grid.Row="3" 
+                 Grid.Column="5"
+                 Content="Name">
+        </Label>
+        
+        <!--Name ComboBox-->
+        <Border Grid.Row="3"  Grid.Column="7"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <ComboBox   Grid.Row="3" 
+                        Grid.Column="7"  
+                        IsEditable="True" 
+                        IsReadOnly="True"
+                        Text="Name"
+                          BorderBrush="Blue"
+                        FontSize="14" 
+                        FontWeight="SemiBold" 
+                        Name="NameComboBox"
+                        Foreground="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" SelectionChanged="NameComboBox_SelectionChanged" >
+            </ComboBox>
+        </Border>
+
+        <Label   Grid.Row="5" 
+                 Grid.Column="5"
+                 Content="District">
+        </Label>
+        <!--District ComboBox-->
+        <Border Grid.Row="5"  Grid.Column="7"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <ComboBox   Grid.Row="5" 
+                        Grid.Column="7"
+                        Name="DistrictComboBox"
+                        Text="District"
+                        FontSize="14" 
+                        BorderBrush="Blue"
+                        IsEditable="True" 
+                        IsReadOnly="True"
+                        FontWeight="SemiBold" 
+                        Foreground="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" >
+            </ComboBox>
+        </Border>
+        
+        <Label   Grid.Row="7" 
+                 Grid.Column="5"
+                 Content="Student's Phone">
+        </Label>
+        
+        <!--Student PhoneNo TextBox-->
+        <Border Grid.Row="7"  Grid.Column="7"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <TextBox  Style="{StaticResource MyWaterMarkStyle}"
+                      Grid.Row="7" 
+                      Grid.Column="3"  
+                      Name="StudentPhoneNoTextBox"
+                      Tag="Student's Phone No"
+                      FontSize="14" 
+                      FontWeight="SemiBold" 
+                      Foreground="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" >
+
+            </TextBox>
+        </Border>
+
+        <Label   Grid.Row="9" 
+                 Grid.Column="5"
+                 Content="Parent's Phone">
+        </Label>
+        <!--Parent PhoneNo TextBox-->
+        <Border Grid.Row="9"  Grid.Column="7"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <TextBox  Style="{StaticResource MyWaterMarkStyle}"
+                      Grid.Row="9" 
+                      Grid.Column="7"  
+                      Name="ParentPhoneNoTextBox"
+                      Tag="Parent's Phone No"
+                      FontSize="14" 
+                      FontWeight="SemiBold" 
+                      Foreground="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}">
+
+            </TextBox>
+        </Border>
+
+        <Label   Grid.Row="11" 
+                 Grid.Column="5"
+                 Content="Allotment Date">
+        </Label>
+        <!--Allotment Date Time Picker -->
+        <Border Grid.Row="11"  Grid.Column="7"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <DatePicker Grid.Row="11" 
+                        Grid.Column="7"  
+                        Text="Allotment Date"
+                        FontSize="14" 
+                        Name="AllotmentDatetimepicker"
+                        FontWeight="SemiBold" 
+                        SelectedDateChanged="AllotmentDatetimepicker_SelectedDateChanged"
+                        Foreground="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}">
+            </DatePicker>
+        </Border>
+        <Label   Grid.Row="13" 
+                 Grid.Column="5"
+                 Content="Expiery Date">
+        </Label>
+        <!--Expiery Date Time Picker -->
+        <Border Grid.Row="13" Grid.Column="7"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <DatePicker Grid.Row="13" 
+                        Grid.Column="7"  
+                        Text="Allotment Date"
+                        FontSize="14" 
+                        Name="ValidationDatetimepicker"
+                       SelectedDateChanged="dateTimePicker2_ValueChanged"
+                        FontWeight="SemiBold" 
+                        Foreground="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}">
+            </DatePicker>
+        </Border>
+
+        <Label   Grid.Row="15" 
+                 Grid.Column="5"
+                 Content="Rent Per Month">
+        </Label>
+        <Border Grid.Row="15"  Grid.Column="7"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <TextBox Style="{StaticResource MyWaterMarkStyle}"
+                     Grid.Row="15" 
+                     Grid.Column="7"  
+                     Tag="Seat Rent Per Month"
+                     FontSize="14" 
+                     FontWeight="SemiBold"
+                     Name="seatRentPerMonthTextBox"
+                     Foreground="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}">
+
+            </TextBox>
+        </Border>
+        <Label   Grid.Row="17" 
+                 Grid.Column="5"
+                 Content="Total Rent">
+        </Label>
+        <!--SeatRent TextBox-->
+        <Border Grid.Row="17"  Grid.Column="7"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <TextBox Style="{StaticResource MyWaterMarkStyle}"
+                     Grid.Row="17" 
+                     Grid.Column="7"  
+                     Tag="Seat Rent"
+                     FontSize="14" 
+                     FontWeight="SemiBold"
+                     Name="SeatRentTextBox"
+                     Foreground="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}">
+
+            </TextBox>
+        </Border>
+
+        <!--Allote Button-->
+        <Border Grid.Row="19"  Grid.Column="7"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <Button   Grid.Row="19" 
+                     Grid.Column="7"  
+                      Style="{StaticResource DiningStyle}" 
+                     Content="Give An Allotement"
+                     FontWeight="SemiBold" 
+                     Name="AlloteButton"
+                      Click="AlloteButton_Click">
+
+            </Button>
+        </Border>
+
+        <!--Refresh All Button-->
+        <Border Grid.Row="19"  Grid.Column="3"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <Button  Grid.Row="19" 
+                     Grid.Column="3"  
+                     FontSize="14"
+                     Style="{StaticResource DiningStyle}" 
+                     Content="Refresh All"
+                     FontWeight="SemiBold" 
+                     Name="RefreshAllButton"
+                      Click="RefreshAllButton_Click">
+
+            </Button>
+        </Border>
+
+    </Grid>
+</Window>

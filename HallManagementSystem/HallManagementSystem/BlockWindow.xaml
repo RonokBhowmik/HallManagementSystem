@@ -1,0 +1,343 @@
+﻿<Window x:Class="HallManagementSystem.BlockWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="New Block Entry Window UI" Height="450" Width="753" Loaded="mydataGrid1_Loaded">
+    <Window.Resources>
+        <Style x:Key="DiningStyle" TargetType="Control">
+            <Setter Property="Button.Background" Value="Gray"/>
+            <Setter Property="Button.Foreground" Value="White"/>
+            <Setter Property="Button.FontFamily" Value="Segoe UI"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Black"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="{x:Type DatePickerTextBox}">
+            <Setter Property="Text" Value="My Custom Text" />
+            <Setter Property="Background" Value="AliceBlue" />
+        </Style>
+
+        <Style x:Key="MyWaterMarkStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <Border Background="White" 
+                                    BorderBrush="Blue" 
+                                    BorderThickness="1"/>
+
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          Margin="5,0,0,0" 
+                                          VerticalAlignment="Center" />
+
+                            <Label Margin="5,0,0,0" 
+                                   x:Name="WaterMarkLabel" 
+                                   Content="{TemplateBinding Tag}"
+                                   VerticalAlignment="Center"
+                                   Visibility="Collapsed" 
+                                   Foreground="Gray" 
+                                   FontFamily="Italic"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="Text" 
+                                               Value=""/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Visibility" 
+                                        TargetName="WaterMarkLabel"
+                                        Value="Visible"/>
+                            </MultiTrigger>
+                            <Trigger Property="IsEnabled" 
+                                     Value="False">
+                                <Setter Property="Foreground" 
+                                        Value="DimGray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="170"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+        </Grid.ColumnDefinitions>
+
+
+        <!--New Floor Entry TextBlock-->
+        <TextBlock  Grid.Row="0"
+                     Background="DarkMagenta"
+                     Text="   Block Entry And Update"
+                     TextAlignment="Left"
+                     FontFamily="Segoe UI Light" FontWeight="ExtraBold"
+                     FontSize="24" 
+                     Foreground="White" 
+                     Grid.ColumnSpan="13" 
+                     Margin="0,0,-37,0" />
+
+        <Label   Grid.Row="2" 
+                 Grid.Column="1"
+                 Content="Floor Name">
+        </Label>
+
+        <Border Grid.Row="2"  
+                Grid.Column="3"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1"
+                Grid.ColumnSpan="3" >
+            <ComboBox 
+                  Grid.Row="2" 
+                  Grid.Column="3"
+                  IsEditable="True" 
+                  IsReadOnly="True"
+                  BorderBrush="Blue"
+                
+                  HorizontalAlignment="Left"
+                  Name="floorNameComboBox" 
+                  VerticalAlignment="Top" 
+                  Width="218" 
+                  Text="Floor Name"
+                  Grid.ColumnSpan="4" 
+                  Height="31" />
+        </Border>
+        <Label   Grid.Row="4" 
+                 Grid.Column="1"
+                 Content="Block ID">
+        </Label>
+
+        <Border Grid.Row="4"  
+                Grid.Column="3"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1"
+                Grid.ColumnSpan="3" >
+            <TextBox Style="{StaticResource MyWaterMarkStyle}"
+                  Grid.Row="4" 
+                  Grid.Column="3"
+                  BorderBrush="Blue"
+                  HorizontalAlignment="Left"
+                  Name="newblockidTextBox"
+                  VerticalAlignment="Top" 
+                  Width="218" 
+                  Tag="Enter Block Id"
+                  Grid.ColumnSpan="4" 
+                  Height="31" />
+        </Border>
+        <Label   Grid.Row="6" 
+                 Grid.Column="1"
+                 Content="Block Name">
+        </Label>
+        <Border Grid.Row="6"  
+                Grid.Column="3"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1"
+                Grid.ColumnSpan="3" >
+            <TextBox Style="{StaticResource MyWaterMarkStyle}"
+                  Grid.Row="6" 
+                  Grid.Column="3"
+                
+                  BorderBrush="Blue"
+                  HorizontalAlignment="Left"
+                  Name="newBlockNameTextBox"
+                  VerticalAlignment="Top" 
+                  Width="218" 
+                  Tag="Enter Block Name"
+                  Grid.ColumnSpan="4" 
+                  Height="31" />
+        </Border>
+
+
+        <Border Grid.Row="8"  
+                Grid.Column="3"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1">
+            <Button
+                Style="{StaticResource DiningStyle}" 
+                Grid.Row="8"  
+                Grid.Column="3" 
+                Content="New" 
+                HorizontalAlignment="Left"
+                Name="new" 
+                Width="100" 
+                Click="new_Click"
+              />
+        </Border>
+
+
+        <Border Grid.Row="8"  
+                Grid.Column="5"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1">
+
+            <Button 
+                Style="{StaticResource DiningStyle}" 
+                Content="Save" 
+                HorizontalAlignment="Left"
+                Name="saveNewBlockButton" 
+                Grid.Row="8"  
+                Grid.Column="5" 
+                Width="100" 
+                Click="saveNewBlockButton_Click" />
+
+        </Border>
+
+        <Border Grid.Row="8"  
+                Grid.Column="7"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1">
+            <Button Style="{StaticResource DiningStyle}" 
+                    Content="Update" 
+                    HorizontalAlignment="Left" 
+                    Name="updateNewBlockButton" 
+                    Grid.Row="10"  
+                    Grid.Column="7"  
+                    VerticalAlignment="Top" 
+                    Width="100" 
+                    Click="updateNewBlockButton_Click" 
+                    Height="25"/>
+        </Border>
+
+        <Border Grid.Row="8"  
+                Grid.Column="9"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1">
+
+            <Button Style="{StaticResource DiningStyle}" 
+                    Content="Delete" 
+                    HorizontalAlignment="Left" 
+                    Name="deleteNewBlockButton" 
+                    VerticalAlignment="Top" 
+                    Width="100" 
+                    Grid.Row="8"  
+                    Grid.Column="9"
+                    Click="deleteNewBlockButton_Click"  
+                    Height="25"/>
+        </Border>
+
+        <Border Grid.Row="8"  
+                Grid.Column="11"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1">
+            <Button Style="{StaticResource DiningStyle}" 
+                    Content="Refresh" 
+                    HorizontalAlignment="Left" 
+                    Grid.Row="8"  
+                    Grid.Column="11" 
+                    Name="refreshButton" 
+                    VerticalAlignment="Top" 
+                    Width="100" 
+                    Click="refreshButton_Click" 
+                    Height="25"/>
+        </Border>
+
+
+        <DataGrid Grid.Row="10" 
+                  Grid.Column="1" 
+                  HorizontalAlignment="Left" 
+                  AutoGenerateColumns="False"
+                  VerticalAlignment="Top"
+                  Name="mydataGrid1"
+                  ItemsSource="{Binding Path=DataBind}"
+                  Height="150" 
+                  SelectedCellsChanged="mydataGrid1_SelectedCellsChanged_1"
+                  Width="659"
+                  Grid.ColumnSpan="11"
+                  Margin="17,10,0,0" >
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Binding="{Binding Path=FloorId}" 
+                                    Header="Floor Id"
+                                    Width="*"
+                                    Visibility="Hidden"
+                                    IsReadOnly="True" />
+
+                <DataGridTextColumn Binding="{Binding Path=BlockId}" 
+                                    Header="Block Id"
+                                    Width="*" 
+                                    IsReadOnly="True" />
+
+                <DataGridTextColumn Binding="{Binding Path=BlockName}" 
+                                    Header="Block Name" 
+                                    MinWidth="40" 
+                                    Width="*" 
+                                    IsReadOnly="True" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Border Grid.Row="12"  
+                Grid.Column="1"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1">
+            <Button Style="{StaticResource DiningStyle}" 
+                    Content="Previous Window"
+                    Grid.Row="12"  
+                    Grid.Column="1" 
+                    Name="previouswindowButton"
+                    VerticalAlignment="Top" 
+                    Click="previouswindowButton_Click"  
+                    Height="25"/>
+        </Border>
+
+        <Border Grid.Row="12"  
+                Grid.Column="11"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1">
+
+            <Button Style="{StaticResource DiningStyle}" 
+                    Content="Exit" 
+                    HorizontalAlignment="Left" 
+                    Grid.Row="14"
+                    Name="exitButton"
+                    Grid.Column="12" 
+                    VerticalAlignment="Top" 
+                    Width="100" 
+                    Click="exitButton_Click"  
+                    Height="25"/>
+        </Border>
+
+        <Border Grid.Row="12"  
+                Grid.Column="5"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1" Grid.ColumnSpan="3" Margin="50,0,68,0">
+            <Button Style="{StaticResource DiningStyle}" 
+                    Content="Next Window" 
+                    HorizontalAlignment="Left"
+                    Grid.Row="12"  
+                    Name="nextwindowButton"
+                    Grid.Column="7"
+                    VerticalAlignment="Top" 
+                    Width="100" 
+                    Click="nextwindowButton_Click"  
+                    Height="25" Margin="-1,-1,0,-1"/>
+        </Border>
+    </Grid>
+</Window>

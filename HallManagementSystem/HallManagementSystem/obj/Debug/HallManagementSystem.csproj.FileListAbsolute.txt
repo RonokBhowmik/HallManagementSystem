@@ -1,0 +1,209 @@
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\bin\Debug\HallManagementSystem.exe.config
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\bin\Debug\HallManagementSystem.exe
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\bin\Debug\HallManagementSystem.pdb
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\AboutHallManagementSystemWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\AboutWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\AssistantProvostWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\NewDepartmentEntryWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\NewDistrictEntryWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\NewFloorEntryWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\BlockWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\MainWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\MainWindow1.baml
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\NewAllotmentWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\NewNameEntryWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\NewProvostEntryWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\NewRollNoEntryWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\NewSeatRentWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\NewSeatWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\NewSessionEntryWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\ProvotsWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\RoomEntryWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\StudentDetailsWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\UpadateHallInfoWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\AboutHallManagementSystemWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\AboutWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\AssistantProvostWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\NewDepartmentEntryWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\NewDistrictEntryWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\NewFloorEntryWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\BlockWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\MainWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\MainWindow1.g.cs
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\NewAllotmentWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\NewNameEntryWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\NewProvostEntryWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\NewRollNoEntryWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\NewSeatRentWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\NewSeatWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\NewSessionEntryWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\ProvotsWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\RoomEntryWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\StudentDetailsWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\UpadateHallInfoWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\App.g.cs
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\HallManagementSystem_MarkupCompile.cache
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\HallManagementSystem.g.resources
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\HallManagementSystem.Properties.Resources.resources
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\HallManagementSystem.csproj.GenerateResource.Cache
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\HallManagementSystem.exe
+G:\Cste 4-1 project work\HallManagementSystem\HallManagementSystem\obj\Debug\HallManagementSystem.pdb
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\bin\Debug\HallManagementSystem.exe.config
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\HallManagementSystem.exe
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\HallManagementSystem.pdb
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\bin\Debug\HallManagementSystem.exe
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\bin\Debug\HallManagementSystem.pdb
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\HallManagementSystem.csprojResolveAssemblyReference.cache
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\AboutHallManagementSystemWindow.baml
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\AboutWindow.baml
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\AssistantProvostWindow.baml
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewDepartmentEntryWindow.baml
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewDistrictEntryWindow.baml
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewFloorEntryWindow.baml
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\BlockWindow.baml
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\MainWindow.baml
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\MainWindow1.baml
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewAllotmentWindow.baml
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewNameEntryWindow.baml
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewProvostEntryWindow.baml
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewRollNoEntryWindow.baml
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewSeatRentWindow.baml
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewSeatWindow.baml
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewSessionEntryWindow.baml
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\ProvotsWindow.baml
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\RoomEntryWindow.baml
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\StudentDetailsWindow.baml
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\UpadateHallInfoWindow.baml
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\AboutHallManagementSystemWindow.g.cs
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\AboutWindow.g.cs
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\AssistantProvostWindow.g.cs
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewDepartmentEntryWindow.g.cs
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewDistrictEntryWindow.g.cs
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewFloorEntryWindow.g.cs
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\BlockWindow.g.cs
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\MainWindow.g.cs
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\MainWindow1.g.cs
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewAllotmentWindow.g.cs
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewNameEntryWindow.g.cs
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewProvostEntryWindow.g.cs
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewRollNoEntryWindow.g.cs
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewSeatRentWindow.g.cs
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewSeatWindow.g.cs
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewSessionEntryWindow.g.cs
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\ProvotsWindow.g.cs
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\RoomEntryWindow.g.cs
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\StudentDetailsWindow.g.cs
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\UpadateHallInfoWindow.g.cs
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\App.g.cs
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\HallManagementSystem_MarkupCompile.cache
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\HallManagementSystem.g.resources
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\HallManagementSystem.Properties.Resources.resources
+C:\Users\Sami\Desktop\Ronok\HallManagementSystem latest\HallManagementSystem\obj\Debug\HallManagementSystem.csproj.GenerateResource.Cache
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\bin\Debug\HallManagementSystem.exe.config
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\HallManagementSystem.exe
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\HallManagementSystem.pdb
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\bin\Debug\HallManagementSystem.exe
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\bin\Debug\HallManagementSystem.pdb
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\HallManagementSystem.csprojResolveAssemblyReference.cache
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\AboutHallManagementSystemWindow.baml
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\AboutWindow.baml
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\AssistantProvostWindow.baml
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewDepartmentEntryWindow.baml
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewDistrictEntryWindow.baml
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewFloorEntryWindow.baml
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\BlockWindow.baml
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\MainWindow.baml
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\MainWindow1.baml
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewAllotmentWindow.baml
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewNameEntryWindow.baml
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewProvostEntryWindow.baml
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewRollNoEntryWindow.baml
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewSeatRentWindow.baml
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewSeatWindow.baml
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewSessionEntryWindow.baml
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\ProvotsWindow.baml
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\RoomEntryWindow.baml
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\StudentDetailsWindow.baml
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\UpadateHallInfoWindow.baml
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\AboutHallManagementSystemWindow.g.cs
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\AboutWindow.g.cs
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\AssistantProvostWindow.g.cs
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewDepartmentEntryWindow.g.cs
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewDistrictEntryWindow.g.cs
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewFloorEntryWindow.g.cs
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\BlockWindow.g.cs
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\MainWindow.g.cs
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\MainWindow1.g.cs
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewAllotmentWindow.g.cs
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewNameEntryWindow.g.cs
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewProvostEntryWindow.g.cs
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewRollNoEntryWindow.g.cs
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewSeatRentWindow.g.cs
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewSeatWindow.g.cs
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewSessionEntryWindow.g.cs
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\ProvotsWindow.g.cs
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\RoomEntryWindow.g.cs
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\StudentDetailsWindow.g.cs
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\UpadateHallInfoWindow.g.cs
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\App.g.cs
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\HallManagementSystem_MarkupCompile.cache
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\HallManagementSystem.g.resources
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\HallManagementSystem.Properties.Resources.resources
+C:\Users\RONOK\Downloads\HallManagementSystem latest\HallManagementSystem\obj\Debug\HallManagementSystem.csproj.GenerateResource.Cache
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\bin\Debug\HallManagementSystem.exe.config
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\HallManagementSystem.exe
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\HallManagementSystem.pdb
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\bin\Debug\HallManagementSystem.exe
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\bin\Debug\HallManagementSystem.pdb
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\AboutHallManagementSystemWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\AboutWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\AssistantProvostWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewDepartmentEntryWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewDistrictEntryWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewFloorEntryWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\BlockWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\MainWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\MainWindow1.baml
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewAllotmentWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewNameEntryWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewProvostEntryWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewRollNoEntryWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewSeatRentWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewSeatWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewSessionEntryWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\ProvotsWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\RoomEntryWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\StudentDetailsWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\UpadateHallInfoWindow.baml
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\AboutHallManagementSystemWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\AboutWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\AssistantProvostWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewDepartmentEntryWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewDistrictEntryWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewFloorEntryWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\BlockWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\MainWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\MainWindow1.g.cs
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewAllotmentWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewNameEntryWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewProvostEntryWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewRollNoEntryWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewSeatRentWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewSeatWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\NewSessionEntryWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\ProvotsWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\RoomEntryWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\StudentDetailsWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\UpadateHallInfoWindow.g.cs
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\App.g.cs
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\HallManagementSystem_MarkupCompile.cache
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\HallManagementSystem.g.resources
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\HallManagementSystem.Properties.Resources.resources
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\HallManagementSystem.csproj.GenerateResource.Cache
+G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\obj\Debug\HallManagementSystem.csprojResolveAssemblyReference.cache
+G:\Cste 4-1 project work\HallManagementSystem Full And Final\HallManagementSystem\bin\Debug\HallManagementSystem.exe.config
+G:\Cste 4-1 project work\HallManagementSystem Full And Final\HallManagementSystem\obj\Debug\HallManagementSystem.exe
+G:\Cste 4-1 project work\HallManagementSystem Full And Final\HallManagementSystem\obj\Debug\HallManagementSystem.pdb
+E:\Cste 4-1 project work\HallManagementSystem Full And Final\HallManagementSystem\bin\Debug\HallManagementSystem.exe.config
+E:\Cste 4-1 project work\HallManagementSystem Full And Final\HallManagementSystem\obj\Debug\HallManagementSystem.exe
+E:\Cste 4-1 project work\HallManagementSystem Full And Final\HallManagementSystem\obj\Debug\HallManagementSystem.pdb

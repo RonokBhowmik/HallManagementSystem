@@ -1,0 +1,238 @@
+﻿<Window x:Class="HallManagementSystem.ProvotsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize"
+        Title="Provots and Assitant Provosts Window UI" Height="450" Width="753">
+    <Window.Resources>
+        <Style x:Key="DiningStyle" TargetType="Control">
+            <Setter Property="Button.Background" Value="Gray"/>
+            <Setter Property="Button.Foreground" Value="White"/>
+            <Setter Property="Button.FontFamily" Value="Segoe UI"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Black"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid >
+        <Grid.RowDefinitions >
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="155"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="155"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="195"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="195"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+
+
+        <TextBlock Grid.Row="0 " 
+                   Background="DarkMagenta"
+                   Grid.ColumnSpan="9"
+                   FontFamily="Segoe UI Light" FontWeight="ExtraBold"
+                   Text="  Hall Provosts And Assistant Provosts Information"
+                   Foreground="White"
+                   FontSize="22"
+                   >
+        </TextBlock>
+
+        <Border Grid.Row="2"  Grid.Column="3"  >
+            <RichTextBox Grid.Row="2" 
+                     Grid.Column="3">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" Text="Javed Hossain" FontSize="18" />
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="Provost" Foreground="#FF7C7C7C" FontSize="14" />
+                    </Paragraph>
+                    <Paragraph>
+                        <Run  Text="Dept:CSTE"/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="Cell:"/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="Email:"/>
+                    </Paragraph>
+
+                </FlowDocument>
+
+            </RichTextBox>
+        </Border>
+        <Border Grid.Row="4"  Grid.Column="3" BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <RichTextBox Grid.Row="4 " 
+                     Grid.Column="3">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" Text="Abhijit Chakraborty" FontSize="18" />
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="Provost" Foreground="#FF7C7C7C" FontSize="14" />
+                    </Paragraph>
+                    <Paragraph>
+                        <Run  Text="Dept:CSTE"/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="Cell:01912183607"/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="Email:abhijit.cse@gmail.com"/>
+                    </Paragraph>
+
+                </FlowDocument>
+
+            </RichTextBox>
+        </Border>
+
+        <Border Grid.Row="2"  Grid.Column="7"  >
+            <RichTextBox Grid.Row="2" 
+                     Grid.Column="7">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" FontSize="18" Text="Kamal Uddin"/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Foreground="#FF7C7C7C" FontSize="14" Text="Provost"/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="Dept:CSTE"/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="Cell:"/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="Email:"/>
+                    </Paragraph>
+
+                </FlowDocument>
+
+            </RichTextBox>
+        </Border>
+
+        <Border Grid.Row="2"  Grid.Column="5"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <Image  Grid.Row="2" 
+                     Grid.Column="5"  
+                   Source="C:\Users\RONOK\documents\visual studio 2012\Projects\InsDelUpData\InsDelUpData\kamalsir.jpg">
+
+            </Image>
+        </Border>
+
+        <Border Grid.Row="2"  Grid.Column="1"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <Image  Grid.Row="2" 
+                     Grid.Column="5"  
+                   Source="G:\Cste 4-1 project work\HallManagementSystem latest\HallManagementSystem\Javed Sir.jpg">
+
+            </Image>
+        </Border>
+
+
+        <Border Grid.Row="4"  Grid.Column="5"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <Image  Grid.Row="2" 
+                     Grid.Column="5"  
+                  >
+
+            </Image>
+        </Border>
+        <Border Grid.Row="4"  Grid.Column="3"  >
+            <RichTextBox Grid.Row="4 " 
+                     Grid.Column="3"
+                     
+                     
+                     >
+                <FlowDocument>
+                    <Paragraph>
+                        <Run Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" Text="Abhijit Chakraborty" FontSize="18" />
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="Provost" Foreground="#FF7C7C7C" FontSize="14" />
+                    </Paragraph>
+                    <Paragraph>
+                        <Run  Text="Dept:CSTE"/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="Cell:01912183607"/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="Email:abhijit.cse@gmail.com"/>
+                    </Paragraph>
+
+                </FlowDocument>
+
+            </RichTextBox>
+        </Border>
+
+        <Border Grid.Row="4"  Grid.Column="1"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" >
+            <Image  Grid.Row="4" 
+                     Grid.Column="1"  
+                   Source="C:\Users\RONOK\documents\visual studio 2012\Projects\InsDelUpData\InsDelUpData\abhijit.jpg">
+
+            </Image>
+        </Border>
+
+        <Border Grid.Row="4"  Grid.Column="7"  >
+            <RichTextBox Grid.Row="4 " 
+                     Grid.Column="7">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" Text="Dr.Humayun Kabir" FontSize="18" />
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="Provost" Foreground="#FF7C7C7C" FontSize="14" />
+                    </Paragraph>
+                    <Paragraph>
+                        <Run  Text="Dept:CSTE"/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="Cell:"/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="Email:"/>
+                    </Paragraph>
+
+                </FlowDocument>
+
+            </RichTextBox>
+        </Border>
+        <!--Back Button-->
+
+        <!--<Button  Style="{StaticResource DiningStyle}"
+                 Grid.Row="6" 
+                     Grid.Column="1"  
+                     FontSize="14" 
+                     Content="Back"
+                     FontWeight="SemiBold" 
+                     Name="BackButton" 
+                     Margin="29,0,27,0"
+                     Height="25" 
+                     VerticalAlignment="Bottom" 
+                     Click="BackButton_Click">
+
+        </Button>-->
+        <Button  Style="{StaticResource DiningStyle}"
+                 Grid.Row="6" 
+                     Grid.Column="7"  
+                     FontSize="14" 
+                     Content="Exit"
+                     FontWeight="SemiBold" 
+                     Name="exitButton" 
+                     Margin="44,0,45,0" 
+                     Height="25" 
+                     VerticalAlignment="Bottom" 
+                     Click="exitButton_Click" >
+        </Button>
+    </Grid>
+</Window>

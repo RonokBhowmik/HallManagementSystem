@@ -1,0 +1,272 @@
+﻿<Window x:Class="HallManagementSystem.AboutHallManagementSystemWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" WindowStartupLocation="CenterScreen"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" ResizeMode="CanMinimize"
+        Title="VSASH Window UI" Height="575" Width="753">
+    <Window.Resources>
+        <Style x:Key="DiningStyle" TargetType="Control">
+            <Setter Property="Button.Background" Value="Gray"/>
+            <Setter Property="Button.Foreground" Value="White"/>
+            <Setter Property="Button.FontFamily" Value="Segoe UI"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Black"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel>
+            <Grid>
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="20"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="20"/> 
+                </Grid.ColumnDefinitions>
+                
+                <!--Floor 4 Button-->
+                <Button   Grid.Row="2" 
+                          Grid.Column="4"  
+                          Content="Floor4"
+                          Background="OrangeRed"
+                          Foreground="White"
+                          FontSize="20" />
+                <!--Floor 4 Button-->
+                <Button   Grid.Row="2" 
+                          Grid.Column="8"  
+                          Content="Floor 4"
+                          Background="DarkOrange"
+                          Foreground="White"
+                          FontSize="20"/>
+                <!--Floor 3 Button-->
+                <Button   Grid.Row="4" 
+                          Grid.Column="4"  
+                          Content="Floor 3"
+                          Background="#FFF05847"
+                          Foreground="White"
+                          FontSize="20"/>
+                <!--Floor 3 Button-->
+                <Button   Grid.Row="4" 
+                          Grid.Column="8"  
+                          Content="Floor 3"
+                          Background="#FF597FF1"
+                          Foreground="White"
+                          FontSize="20"/>
+                <!--Floor 2 Button-->
+                <Button   Grid.Row="6" 
+                          Grid.Column="4"  
+                          Content="Floor 2"
+                          Background="#FF597FF1"
+                          Foreground="White"
+                          FontSize="20"/>
+                <!--Floor 2 Button-->
+                <Button   Grid.Row="6" 
+                          Grid.Column="8"  
+                          Content="Floor 2"
+                          Background="#FFF05847"
+                          Foreground="White"
+                          FontSize="20"/>
+                
+                <!--Floor 1 Button-->
+                <Button   Grid.Row="8" 
+                          Grid.Column="4"  
+                          Content="Floor 1"
+                          Background="DarkOrange"
+                          Foreground="White"
+                          FontSize="20"/>
+                
+                <!--Floor 1 Button-->
+                <Button   Grid.Row="8" 
+                          Grid.Column="8"  
+                          Content="Floor 1"
+                          Background="OrangeRed"
+                          Foreground="White"
+                          FontSize="20"/>
+                <!--Mosque Button-->
+                <Button   Grid.Row="6" 
+                          Grid.Column="6"  
+                          Content="Mosque"
+                          Background="#7EC350"
+                          Foreground="White"
+                          FontSize="20"/>
+                <!--Hall Dining Button-->
+                <Button   Grid.Row="4" 
+                          Grid.Column="6"  
+                          Content="Hall Dining"
+                          Background="#7EC350"
+                          Foreground="White"
+                          FontSize="20"/>
+                <!--Block A Button-->
+                <Button   Grid.Row="1" 
+                          Grid.Column="2"   
+                          Content="Block A"
+                          Background="#4D5251"
+                          Foreground="White"
+                          FontSize="20"
+                          Grid.RowSpan="9"/>
+                <!--Block B Button-->
+                <Button   Grid.Row="1" 
+                          Grid.Column="10"  
+                          Content="Block B"
+                          Background="#4D5251"
+                          Foreground="White"
+                          FontSize="20" 
+                          Grid.RowSpan="9"/>
+                
+                <!--VSASH Outerface textblock-->
+                <TextBlock Grid.Row="10"
+                           Text="At a glance VSASH Outerface" 
+                           Background="DarkMagenta" 
+                           Grid.ColumnSpan="12"
+                           FontSize="20" 
+                           TextAlignment="Center"
+                           Foreground="White"
+                           FontWeight="Normal"
+                           Margin="0,10,5,0"/>
+                <!--BacKButton-->
+                <!--<Button  Style="{StaticResource DiningStyle}" 
+                         Grid.Row="18" 
+                         Grid.Column="2"  
+                         Content="Back"
+                         Name="BackButton"
+                         Foreground="White"
+                         Height="25" 
+                         VerticalAlignment="Top" 
+                         Click="BackButton_Click" />-->
+                <!--OKButton-->
+                <Button  Style="{StaticResource DiningStyle}" 
+                         Grid.Row="18" 
+                         Grid.Column="10"  
+                         Content="Exit"
+                         Name="ExitButton"
+                         Foreground="White" 
+                         Click="ExitButton_Click" />
+                
+                <TextBlock Grid.Row="12"
+                           Grid.Column="2"
+                           Text="Total Blocks" 
+                           
+                           TextAlignment="Left"
+                           FontSize="15" 
+                           Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}"
+                           FontWeight="Normal" />
+
+                <TextBlock Grid.Row="12"
+                           Grid.Column="4"
+                           Name="totalBlocksTextBlock"
+                           TextAlignment="Left"
+                           FontSize="16" 
+                           Foreground="Crimson"
+                           FontWeight="Normal" RenderTransformOrigin="0.5,0.5">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="1.595"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+
+                <TextBlock Grid.Row="12"
+                           Grid.Column="8"
+                           Name="totalFloorsTextBlock"
+                           TextAlignment="Left"
+                           FontSize="14" 
+                           Foreground="Crimson"
+                           FontWeight="Normal" />
+                
+                <TextBlock Grid.Row="14"
+                           Grid.Column="4"
+                           Name="totalRoomsTextBlock"
+                           TextAlignment="Left"
+                           FontSize="14" 
+                           Foreground="Crimson"
+                           FontWeight="Normal"/>
+
+                <TextBlock Grid.Row="14"
+                           Grid.Column="8"
+                          
+                           TextAlignment="Left"
+                           Name="TotalSeatTextBlock"
+                           FontSize="14" 
+                           Foreground="Crimson"
+                           FontWeight="Normal"/>
+                
+                <TextBlock Grid.Row="14"
+                           Grid.Column="6"
+                           Text="Total Seats" 
+                           Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}"
+                           FontSize="15" 
+                           TextAlignment="Center"
+                           FontWeight="Normal"
+                           Margin="0,0,63,0"/>
+                
+                <TextBlock Grid.Row="14"
+                           Grid.Column="2"
+                           Text="Total Rooms" 
+                           FontSize="15" 
+                           TextAlignment="Center"
+                           Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}"
+                           FontWeight="Normal" Grid.ColumnSpan="2" Margin="0,0,10,0" />
+                
+                <TextBlock Grid.Row="12"
+                           Grid.Column="6"
+                           Text="Total Floors" 
+                           FontSize="15" 
+                           TextAlignment="Center"
+                           Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}"
+                           FontWeight="Normal" 
+                           Margin="0,0,63,0"/>
+                
+                <TextBlock Grid.Row="16"
+                           Grid.Column="6"
+                           Text="Total Available Seats" 
+                           Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}"
+                           FontSize="15" 
+                           TextAlignment="Center"
+                           FontWeight="Normal" 
+                           Margin="0,0,10,0"/>
+
+                <TextBlock Grid.Row="16"
+                           Grid.Column="8"
+                           Name="TotalAvailableSeatTextBlock"
+                           Foreground="Crimson"
+                           FontSize="15" 
+                           TextAlignment="Center"
+                           FontWeight="Normal" Margin="25,0"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

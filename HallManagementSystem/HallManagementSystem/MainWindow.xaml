@@ -1,0 +1,230 @@
+﻿<Window x:Class="HallManagementSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" WindowStartupLocation="CenterScreen"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Loaded="Window_Loaded" ResizeMode="CanMinimize"
+        Title="Login Window UI" Height="450" Width="753">
+    <Window.Resources>
+        <Style x:Key="DiningStyle" TargetType="Control">
+            <Setter Property="Button.Background" Value="Gray"/>
+            <Setter Property="Button.Foreground" Value="White"/>
+            <Setter Property="Button.FontFamily" Value="Segoe UI"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Black"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="MyWaterMarkStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <Border Background="White" 
+                                    BorderBrush="Blue" 
+                                    BorderThickness="1"/>
+
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          Margin="5,0,0,0" 
+                                          VerticalAlignment="Center" />
+
+                            <Label Margin="5,0,0,0" 
+                                   x:Name="WaterMarkLabel" 
+                                   Content="{TemplateBinding Tag}"
+                                   VerticalAlignment="Center"
+                                   Visibility="Collapsed" 
+                                   Foreground="Gray" 
+                                   FontFamily="Italic"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="Text" 
+                                               Value=""/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Visibility" 
+                                        TargetName="WaterMarkLabel"
+                                        Value="Visible"/>
+                            </MultiTrigger>
+                            <Trigger Property="IsEnabled" 
+                                     Value="False">
+                                <Setter Property="Foreground" 
+                                        Value="DimGray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+      
+            <Grid.RowDefinitions >
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        
+        
+            <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>  
+        </Grid.ColumnDefinitions>
+
+
+        <!--<TextBlock Grid.Row="0"  
+            		Background="DarkMagenta"
+            		VerticalAlignment="Top"
+                    Grid.ColumnSpan="13" 
+                    Margin="-4,0,-37,0"
+                    Height="31" />-->
+        
+        <TextBlock  Grid.Row="2"  
+            		  Grid.Column="5"  
+            		  Text="Hall Management System"
+            		  FontSize="20" 
+                   
+            		  Foreground="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}"
+            		  Height="31"
+            		  VerticalAlignment="Top" 
+            		  FontWeight="Bold" 
+                      Grid.ColumnSpan="5" Margin="0,0,85,0"/>
+        <TextBlock Grid.Row="4"  
+            		Grid.Column="5"  
+            		Text="Vasha Shohid Abdus Salam Hall" 
+            		Foreground="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+            		FontWeight="SemiBold" Margin="25,1,10,4" Grid.ColumnSpan="3"/>
+
+        <TextBlock Grid.Row="6"  
+            		Grid.Column="5"  
+            		Text="Noakhali Science And Technology University"
+            		Foreground="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+            		FontWeight="SemiBold" Grid.ColumnSpan="5" Margin="0,0,85,0"/>
+
+        <TextBlock Grid.Row="8"  
+            		Grid.Column="5"  
+            		Text="Sonapur,Noakhali-3814" 
+            		Foreground="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}"
+            		FontWeight="SemiBold" Margin="45,0,33,0" Grid.ColumnSpan="3"/>
+
+        <TextBlock  Grid.Row="10"
+                    Grid.Column="5"  
+                    Text="Enter Login Information" 
+                    FontWeight="Bold"
+                    FontSize="22" 
+                    Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" 
+                    Grid.ColumnSpan="5"
+                    HorizontalAlignment="Left" 
+                    Width="250"/>
+        
+        <TextBlock Grid.Row="12"  
+                   Grid.Column="5"  
+                   Text="Provost Name" 
+                   Name="ProvostNametextblock"
+                   FontSize="16" 
+                   FontFamily="{DynamicResource {x:Static SystemFonts.IconFontFamilyKey}}" 
+                   Foreground="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+        
+        <!--TextBox Provost Name-->
+        <TextBox Grid.Row="12"  
+                 Grid.Column="7" 
+                 BorderBrush="Blue"
+                 Name="ProvostNametextbox"
+                 Style="{StaticResource MyWaterMarkStyle}" 
+                 Tag="Enter Your Name" 
+                 Grid.ColumnSpan="3" />
+        
+        <!--TextBlock Provost Rank-->
+        <TextBlock Grid.Row="14"  
+                   Grid.Column="5"  
+                   Text="Provost Rank" 
+                   FontSize="16" 
+                   Foreground="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+
+        <!--ComboBox Provost Rank-->
+        <ComboBox Grid.Row="14"
+                  Grid.Column="7"
+                  Name="ProvostRankComboBox"
+                  Height="25"
+                  BorderBrush="Blue"
+                  VerticalAlignment="Bottom" 
+                  Text="Select Rank"
+                  IsEditable="True" 
+                  IsReadOnly="True" 
+                  Grid.ColumnSpan="3">
+        </ComboBox>
+
+        <!--Textblock Password-->
+        <TextBlock Grid.Row="16" 
+                   Grid.Column="5" 
+                   Text="Password" 
+                   Name="Passwordtextblock"
+                   FontSize="16" 
+                   Foreground="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+
+        <!--Textbox Password-->
+        <PasswordBox Grid.Row="16"  
+                     Grid.Column="7" 
+                     BorderBrush="Blue"
+                     Name="ProvostPasswordtextbox"
+                     Grid.ColumnSpan="3"/>
+        <!--OK button-->
+        <Button Style="{StaticResource DiningStyle}"
+                Grid.Row="19" 
+                Grid.Column="3"  
+                Content="Ok"
+                FontWeight="SemiBold" 
+                Name="OKButton" 
+                Click="OKButton_Click" />
+
+        <!--Reset button-->
+        <Button Style="{StaticResource DiningStyle}"  
+                Grid.Row="19" 
+                Grid.Column="7"  
+                Content="Reset"  
+                Name="ResetButton"
+                FontWeight="SemiBold" 
+                Click="ResetButton_Click" 
+                RenderTransformOrigin="0.756,0.56"/>
+
+        <!--Exit button-->
+        <Button Style="{StaticResource DiningStyle}"  
+                Grid.Row="19" 
+                Grid.Column="11"  
+                Content="Exit"  
+                ToolTip="Close"
+                FontWeight="SemiBold" 
+                Name="ExitButton" 
+                Click="ExitButton_Click" 
+                RenderTransformOrigin="0.744,0.4"/> 
+    </Grid>
+</Window>

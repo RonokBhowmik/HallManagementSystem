@@ -1,0 +1,402 @@
+﻿<Window x:Class="HallManagementSystem.NewSeatWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" WindowStartupLocation="CenterScreen"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" ResizeMode="CanMinimize"
+        Title="New Seat Window UI" Height="600" Width="800" Loaded="mydataGrid3_Loaded">
+    <Window.Resources>
+        <Style x:Key="DiningStyle" TargetType="Control">
+            <Setter Property="Button.Background" Value="Gray"/>
+            <Setter Property="Button.Foreground" Value="White"/>
+            <Setter Property="Button.FontFamily" Value="Segoe UI"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Black"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="{x:Type DatePickerTextBox}">
+            <Setter Property="Text" Value="My Custom Text" />
+            <Setter Property="Background" Value="AliceBlue" />
+        </Style>
+
+        <Style x:Key="MyWaterMarkStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <Border Background="White" 
+                                    BorderBrush="Blue" 
+                                    BorderThickness="1"/>
+
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          Margin="5,0,0,0" 
+                                          VerticalAlignment="Center" />
+
+                            <Label Margin="5,0,0,0" 
+                                   x:Name="WaterMarkLabel" 
+                                   Content="{TemplateBinding Tag}"
+                                   VerticalAlignment="Center"
+                                   Visibility="Collapsed" 
+                                   Foreground="Gray" 
+                                   FontFamily="Italic"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="Text" 
+                                               Value=""/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Visibility" 
+                                        TargetName="WaterMarkLabel"
+                                        Value="Visible"/>
+                            </MultiTrigger>
+                            <Trigger Property="IsEnabled" 
+                                     Value="False">
+                                <Setter Property="Foreground" 
+                                        Value="DimGray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="37"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="220"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="15"/>
+        </Grid.ColumnDefinitions>
+        <!--New Seat Entry TextBlock-->
+        <TextBlock  
+                     Background="DarkMagenta"
+                     Text="   Seat Entry And Update"
+                     TextAlignment="Left"
+                     FontFamily="Segoe UI Light" FontWeight="ExtraBold" 
+                     FontSize="24" 
+                     Foreground="White" 
+                     Grid.ColumnSpan="14"
+                     Margin="-2,1,-66,10"
+                     Grid.RowSpan="2"/>
+
+
+        <Label   Grid.Row="2" 
+                 Grid.Column="1"
+                 Content="Floor Name">
+        </Label>
+        
+        <Border Grid.Row="2"  
+                Grid.Column="3"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1"
+                Grid.ColumnSpan="3" >
+            <ComboBox 
+                  Grid.Row="2" 
+                  Grid.Column="3"
+                  IsEditable="True" 
+                  IsReadOnly="True"
+                  BorderBrush="Blue"
+                  HorizontalAlignment="Left"
+                  Name="floorNameComboBox" 
+                  VerticalAlignment="Top" 
+                  Width="218" 
+                  Text="Floor Name"
+                  SelectionChanged="floorNameComboBox_SelectionChanged" 
+                  Grid.ColumnSpan="4" 
+                  Height="31" />
+        </Border>
+        
+        <Label   Grid.Row="4" 
+                 Grid.Column="1"
+                 Content="Block Name">
+        </Label>
+        
+        <Border Grid.Row="4"  
+                Grid.Column="3"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1" 
+                Grid.ColumnSpan="3" >
+            
+            <ComboBox Grid.Row="4" 
+                      Grid.Column="3"
+                      IsEditable="True" 
+                      IsReadOnly="True"
+                      BorderBrush="Blue"
+                      Text="Block Name"
+                      HorizontalAlignment="Left" 
+                      Name="blockNameComboBox" 
+                      VerticalAlignment="Top"
+                      Width="216" 
+                      RenderTransformOrigin="0.167,-0.318" 
+                      SelectionChanged="blockNameComboBox_SelectionChanged" 
+                      Grid.ColumnSpan="4"
+                      Height="31" />
+        </Border>
+
+        <Label   Grid.Row="6" 
+                 Grid.Column="1"
+                 Content="Room No">
+        </Label>
+        <Border Grid.Row="6"  
+                Grid.Column="3"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1" 
+                Grid.ColumnSpan="3" >
+            
+            <ComboBox  Grid.Row="6" 
+                       Grid.Column="3" 
+                       HorizontalAlignment="Left" 
+                       Name="roomNoCombobox"
+                       IsEditable="True" 
+                       IsReadOnly="True"
+                       BorderBrush="Blue"
+                       Text="Room No"
+                       VerticalAlignment="Top" 
+                       Width="217" 
+                       Grid.ColumnSpan="4" 
+                       Height="31" />
+        </Border>
+
+        <Label   Grid.Row="8" 
+                 Grid.Column="1"
+                 Content="Seat Id">
+        </Label>
+        <Border Grid.Row="8"  
+                Grid.Column="3"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1" >
+            
+            <TextBox Style="{StaticResource MyWaterMarkStyle}"
+                 Grid.Row="8" 
+                 Grid.Column="3"
+                 Height="31" 
+                 TextWrapping="Wrap" 
+                 Name="seatIdTextBox"  
+                 VerticalAlignment="Top" 
+                 Grid.ColumnSpan="4" 
+                 Tag="Enter Seat Id"
+                 RenderTransformOrigin="0.725,0.548"
+                 Margin="0,-1,-117,-1"/>
+        </Border>
+        
+        <Label   Grid.Row="10" 
+                 Grid.Column="1"
+                 Content="Seat Name">
+        </Label>
+        
+        <Border Grid.Row="10"  
+                Grid.Column="3"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1" 
+                Grid.ColumnSpan="3" >
+
+            <TextBox Style="{StaticResource MyWaterMarkStyle}"
+                     Height="30" 
+                     Grid.Row="10" 
+                     Grid.Column="3"
+                     Tag="Enter Seat Name"
+                     TextWrapping="Wrap" 
+                     Name="seatNameTextBox" 
+                     VerticalAlignment="Top" />
+        </Border>
+
+        <Border Grid.Row="12"  
+                Grid.Column="3"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1">
+            <Button Style="{StaticResource DiningStyle}" 
+                Grid.Row="12"  
+                Grid.Column="3" 
+                Content="New" 
+                HorizontalAlignment="Left"
+                Name="newButton" 
+                Width="100" 
+                Click="newButton_Click"
+              />
+        </Border>
+        
+        <Border Grid.Row="12"  
+                Grid.Column="5"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1">
+
+            <Button Style="{StaticResource DiningStyle}" Content="Save" 
+                HorizontalAlignment="Left"
+                Name="saveButton" 
+                Grid.Row="12"  
+                Grid.Column="5" 
+                Width="100" 
+                Click="saveButton_Click" />
+
+        </Border>
+
+        <Border Grid.Row="12"  
+                Grid.Column="7"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1">
+            <Button Style="{StaticResource DiningStyle}" Content="Update" 
+                HorizontalAlignment="Left" 
+                Name="updateButton" 
+                Grid.Row="12"  
+                Grid.Column="7"  
+                VerticalAlignment="Top" 
+                Width="100" 
+                Click="updateButton_Click" 
+                Height="25"/>
+        </Border>
+        
+        <Border Grid.Row="12"  
+                Grid.Column="9"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1">
+
+            <Button Style="{StaticResource DiningStyle}" Content="Delete" 
+                HorizontalAlignment="Left" 
+                Name="deleteButton" 
+                VerticalAlignment="Bottom" 
+                Width="100" 
+                Grid.Row="12"  
+                Grid.Column="9"
+                Click="deleteButton_Click"  
+                Height="25" Margin="0,0,-1,-1"/>
+
+        </Border>
+        <Border Grid.Row="12"  
+                Grid.Column="11"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1">
+            <Button Style="{StaticResource DiningStyle}" Content="Refresh" 
+                    HorizontalAlignment="Left" 
+                    Grid.Row="12"  
+                    Grid.Column="11" 
+                    Name="refreshButton" 
+                    VerticalAlignment="Top" 
+                    Width="100" 
+                    Click="refreshButton_Click" 
+                    Height="25"/>
+        </Border>
+
+        <DataGrid Grid.Row="14" 
+                  Grid.Column="1" 
+                  HorizontalAlignment="Left" 
+                  AutoGenerateColumns="False" 
+                  VerticalAlignment="Top" 
+                  Height="201" 
+                  Width="654" 
+                  Name="mydataGrid3" 
+                  ItemsSource="{Binding Path=DataBind}"
+                  SelectedCellsChanged="mydataGrid3_SelectedCellsChanged_1"
+                  Grid.ColumnSpan="11"
+                  Margin="17,19,0,0" >
+
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Binding="{Binding Path=FloorId}" 
+                                    Header="Floor Id"
+                                    Width="*" Visibility="Hidden" 
+                                    IsReadOnly="True" />
+
+                <DataGridTextColumn Binding="{Binding Path=BlockId}" 
+                                    Header="Block Id"
+                                    Visibility="Hidden"
+                                    Width="*" 
+                                    IsReadOnly="True" />
+
+                <DataGridTextColumn Binding="{Binding Path=RoomId}" 
+                                    Header="Room Id" Visibility="Hidden"
+                                    MinWidth="40" 
+                                    Width="*" 
+                                    IsReadOnly="True" />
+
+                <DataGridTextColumn Binding="{Binding Path=SeatId}" 
+                                    Header="Seat Id" 
+                                    MinWidth="40" 
+                                    Width="*" 
+                                    IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding Path=SeatName}" 
+                                    Header="Seat Name" 
+                                    MinWidth="40" 
+                                    Width="*" 
+                                    IsReadOnly="True" />
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!--<Border Grid.Row="16"  
+                Grid.Column="3"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1">
+            <Button Style="{StaticResource DiningStyle}" 
+                    Content="Back"
+                    Grid.Row="16"  
+                    Grid.Column="3" 
+                    Name="backButton"
+                    VerticalAlignment="Top" 
+                    Click="backButton_Click"  
+                    Height="25"/>
+        </Border>-->
+
+        <Border Grid.Row="16"  
+                Grid.Column="11"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1">
+
+            <Button Style="{StaticResource DiningStyle}"
+                    Content="Exit" 
+                    HorizontalAlignment="Left" 
+                    Grid.Row="16"  
+                    Grid.Column="11" 
+                    VerticalAlignment="Top" 
+                    Width="100" 
+                    Click="exitButton_Click"  
+                    Height="25"/>
+        </Border>
+        <Border Grid.Row="16"  
+                Grid.Column="1"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1">
+            <Button Style="{StaticResource DiningStyle}" 
+                    Content="Previous Window" 
+                    HorizontalAlignment="Left"
+                    Grid.Row="16"  
+                    Grid.Column="1"
+                    Name="previousWindowButton"
+                    VerticalAlignment="Top" 
+                    Width="100" 
+                    Click="previousWindowButton_Click"  
+                    Height="25"/>
+        </Border>
+
+    </Grid>
+</Window>

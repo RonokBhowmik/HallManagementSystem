@@ -1,0 +1,282 @@
+﻿<Window x:Class="HallManagementSystem.AssistantProvostWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize"
+        Title="AssistantProvostWindow" Height="700" Width="955">
+    <Window.Resources>
+        <Style x:Key="DiningStyle" TargetType="Control">
+            <Setter Property="Button.Background" Value="Gray"/>
+            <Setter Property="Button.Foreground" Value="White"/>
+            <Setter Property="Button.FontFamily" Value="Segoe UI"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Black"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="MyWaterMarkStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <Border Background="White" 
+                                    BorderBrush="#FF7D8683" 
+                                    BorderThickness="1"/>
+
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          Margin="5,0,0,0" 
+                                          VerticalAlignment="Center" />
+
+                            <Label Margin="5,0,0,0" 
+                                   x:Name="WaterMarkLabel" 
+                                   Content="{TemplateBinding Tag}"
+                                   VerticalAlignment="Center"
+                                   Visibility="Collapsed" 
+                                   Foreground="Gray" 
+                                   FontFamily="Italic"/>
+
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="Text" 
+                                               Value=""/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Visibility" 
+                                        TargetName="WaterMarkLabel"
+                                        Value="Visible"/>
+                            </MultiTrigger>
+                            <Trigger Property="IsEnabled" 
+                                     Value="False">
+                                <Setter Property="Foreground" 
+                                        Value="DimGray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="26"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="185"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="10"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="15"/>
+        </Grid.ColumnDefinitions>
+
+        <Menu Grid.Row="0" Background="DarkMagenta" FontFamily="Segoe UI Light" FontSize="18" FontWeight="ExtraBold" Grid.ColumnSpan="13" Margin="-10,0,-237,0" Grid.RowSpan="2">
+            <MenuItem Header="     File" 
+                      Foreground="White"
+                     >
+                <MenuItem Header="Exit"
+                          Foreground="Black" 
+                          Click="ExitButton_Click" />
+            </MenuItem>
+            <MenuItem Header="Seat Allocation Management"
+                      Foreground="White" 
+                      FontWeight="Bold">
+
+                <MenuItem Header="New Allotment"
+                          Foreground="Black"  
+                          Click="NewAllotmentMenuItem_Click">
+                    <MenuItem.Icon >
+                        <Image Source="Ring.BMP" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Student Details" 
+                          Foreground="Black" 
+                          Click="StudentDetailsMenuItem_Click">
+                    <MenuItem.Icon >
+                        <Image Source="Ring.BMP" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+
+            <!--<MenuItem Header="Dining Management"
+                      Foreground="White" 
+                      FontWeight="Bold">
+
+                <MenuItem Header="Meal ID Details" 
+                          Foreground="Black" 
+                          Click="MealIDDetailsMenuItem_Click">
+                    <MenuItem.Icon >
+                        <Image Source="Note.BMP" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Border Details" 
+                          Foreground="Black" 
+                          Click="BorderDetailsMenuItem_Click">
+                    <MenuItem.Icon >
+                        <Image Source="Note.BMP" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>-->
+
+            <MenuItem Header="About" 
+                      Foreground="White" 
+                      FontWeight="Bold">
+                <MenuItem Header="About Developer" 
+                          Foreground="Black" 
+                          Click="AboutMenuItem_Click">
+                    <MenuItem.Icon >
+                        <Image Source="Face.BMP" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <Border Grid.Row="3"  Grid.Column="1"  BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="3" >
+
+            <TextBlock   Grid.Row="2" 
+                         Grid.Column="1"  
+                         Text="Basic information"
+                         TextAlignment="Center"
+                         FontFamily="Segoe UI Light"
+                         Background="DarkMagenta"
+                         FontWeight="Bold" 
+                         Foreground="White"
+                         FontSize="18" 
+                         Margin="-1,0"/>
+        </Border>
+
+        <Border Grid.Row="5" 
+                Grid.Column="1"  
+                BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" 
+                BorderThickness="1" 
+                Grid.ColumnSpan="3">
+
+
+            <Button   
+                     Grid.Row="4" 
+                     Grid.Column="1"  
+                     Content="Provosts"
+                     FontWeight="ExtraBold" 
+                     Name="ProvostsButton"
+                     FontSize="18"
+                FontFamily="Segoe UI Light"
+                Background="DarkMagenta"
+                     Margin="-1" 
+                Foreground="White"
+                     Click="ProvostsButton_Click"/>
+        </Border>
+        <Border Grid.Row="7"  Grid.Column="1"  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderThickness="1" Grid.ColumnSpan="3">
+
+            <Button  
+                     Grid.Row="6" 
+                     Grid.Column="1"  
+                     Content="About VSASH"
+                     FontWeight="Bold" 
+                     Name="AboutVSASHButton"  
+                     FontSize="18" 
+                Background="DarkMagenta"
+                Foreground="White"
+                
+                FontFamily="Segoe UI Light"
+                     Margin="-1" 
+                     Click="AboutVSASHButton_Click"/>
+        </Border>
+        <TextBlock   Grid.Row="3" 
+                     Grid.Column="5"  
+                     Text="Welcome Mr."
+                     TextAlignment="Left"
+                     FontWeight="Bold" 
+                     FontSize="18" 
+                     Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" 
+                     Grid.ColumnSpan="3" Margin="0,1,0,10" Grid.RowSpan="2"/>
+
+        <TextBlock   Grid.Row="3" 
+                     Grid.Column="7"  
+                     FontWeight="ExtraBold"
+                     FontSize="20"
+                     Name="Welcometextblock"
+                     TextAlignment="Left" Grid.ColumnSpan="3" Margin="43,1,74,0"/>
+
+        <TextBlock   Grid.Row="5" 
+                     Grid.Column="5"  
+                     Text="You Entered As"
+                     TextAlignment="Left"
+                     FontWeight="Bold" 
+                     FontSize="18" 
+                     Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}"
+                     Grid.ColumnSpan="3"
+                     Margin="0,2,0,9" 
+                     Grid.RowSpan="2"/>
+
+        <TextBlock   Grid.Row="5" 
+                     Grid.Column="7"  
+                     TextAlignment="Left"
+                     FontWeight="ExtraBold"
+                     FontSize="20"
+                     Name="Entertextblock"
+                     Grid.ColumnSpan="4"
+                     Margin="44,2,7,9"
+                     Grid.RowSpan="2" />
+
+        <TextBlock 
+                      TextWrapping="Wrap" 
+                      VerticalAlignment="Bottom" 
+                      Margin="0,0,-231,0"
+                      Height="200"
+                      Grid.Row="9"
+                      Grid.Column="5"
+                      FontSize="15" 
+                      Grid.ColumnSpan="8" HorizontalAlignment="Right" Width="689" Text="Noakhali Science and Technology University is a pioneering science and technology-university in our country. Vasha Shohid Abdus Salam Hall (VSASH) is the only gent's hostel of this university. Hall (VSASH) management system is a desktop based system that would be suitable for the persons who are directly associated with the management of the hall. This Hall Management System is an interactive system which is a combination of both Seat Allocation management system and Dining management system. The positive aspects of this system is that, Responsible peoples can easily manage the hall details, room details ,student records and provides easy way of room allocation and hall attendance."/>
+
+        <Button  Style="{StaticResource DiningStyle}" 
+                 Grid.Row="13" 
+                 Grid.Column="12"  
+                 Content="Exit"
+                 Name="ExitButton"
+                 FontWeight="Bold" 
+                 Height="30" 
+                 VerticalAlignment="Top"
+                 Click="ExitButton_Click" Margin="122,92,-207,0"/>
+        <TextBlock Text="{Binding Source={x:Static sys:DateTime.Today},  
+           StringFormat='{}{0:dddd, MMMM dd, yyyy}'}" FontSize="20"
+            Grid.Column="1" HorizontalAlignment="Left" Margin="0,9,0,0" Grid.Row="15" 
+                   TextWrapping="Wrap"  VerticalAlignment="Top" Height="31" 
+                   Width="234" Grid.ColumnSpan="4" Foreground="Crimson"/>
+
+        <TextBlock Grid.ColumnSpan="2" Grid.Column="11" HorizontalAlignment="Left" FontSize="20"
+                   Height="30" Margin="34,157,-212,0" Grid.Row="13" 
+                   TextWrapping="Wrap" Text="Vhasha Shahid Abdus Salam Hall" VerticalAlignment="Top" Width="295" Foreground="Crimson" Grid.RowSpan="2"/>
+
+        <TextBlock Grid.ColumnSpan="2" Grid.Column="11" 
+                   HorizontalAlignment="Left" Height="27" Margin="0,9,-225,0" 
+                   Grid.Row="15" TextWrapping="Wrap" FontSize="17"
+                   Text="Noakhali Science And Technology University" 
+                   VerticalAlignment="Top" Width="342" Foreground="Crimson"/>
+    </Grid>
+
+</Window>
